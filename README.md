@@ -23,3 +23,4 @@ Things you may want to cover:
 
 * ...
 # rails-fishing-report-project
+# rails-project
