@@ -4,6 +4,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable
 
+  devise_for :users, :controllers => {registrations: 'registrations', omniauth_callbacks: 'callbacks'}
+  devise_scope :user do
+    get 'login', to: 'devise/sessions/#new'
+    get 'signup', to: 'devise/registrations#new'
+  end
+
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
@@ -13,4 +19,5 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
     end
   end
+  
 end
