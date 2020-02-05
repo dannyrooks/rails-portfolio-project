@@ -11,5 +11,11 @@ class LocationController < ApplicationController
   def create
   end
 
+  private
+
+  def location_params
+    params.require(:location).permit(:name)
+  end
+
 
 end
