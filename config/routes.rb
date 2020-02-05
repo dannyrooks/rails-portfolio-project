@@ -2,11 +2,10 @@ Rails.application.routes.draw do
   
   root to: 'application#welcome'
 
-  resources :reports
+  # resources :reports
 
-  resources :locations do
-    resources :reports, only: [:show, :new, :create]
-  end
+  resources :locations
+  
   
   devise_for :users, :controllers => {registrations: 'registrations', omniauth_callbacks: 'callbacks'}
   devise_scope :user do 

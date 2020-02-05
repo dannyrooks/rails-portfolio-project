@@ -1,0 +1,8 @@
+<h1>index view</h1>
+
+<% @locations.each do |location| %>
+    <h2><%= location.name %></h2>
+    <%= link_to "View Location", location_path(location) %>
+<% end %>
+
+<%= link_to 'New Location', new_location_path %>
