@@ -1,2 +1,8 @@
-<h1><%= @location.name %></h1>
+<h1>Location</h1>
+<h2><%= @location.name %></h2><br>
+    <h4>Description</h4><br>
 <p><%= @location.description %></p>
+
+<%= link_to 'Back', root_path %>
+<%= link_to 'Location', new_location_path %>
+<!-- add created at timestamp >

@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_many :locations, through: :reports
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :omniauthable
+          :recoverable, :rememberable, :validatable, :omniauthable
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
@@ -19,3 +19,4 @@ class User < ApplicationRecord
   end
 
 end
+        

@@ -31,7 +31,15 @@ gem 'devise'
 gem 'omniauth-github'
 gem 'pry'
 gem 'dotenv-rails'
-# gem 'bootstrap', '~> 4.4', '>= 4.4.1'
+gem 'bootstrap'
+gem 'bootstrap-sass'
+gem 'jquery-rails'
+gem 'simple_form'
+#  Be sure to have a copy of the Bootstrap stylesheet available on your
+  # application, you can get it on http://getbootstrap.com/.
+  # Inside your views, use the 'simple_form_for' with the Bootstrap form
+  # class, '.form-inline', as the following:
+  #   = simple_form_for(@user, html: { class: 'form-inline' }) do |form|
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,5 +1,6 @@
 class LocationsController < ApplicationController
-  before_action :find_location, only: [:show, :new, :create, :index]
+  before_action :set_location, only: [:show, :new, :create, :index]
+  before_action :authenticate_user!
   
   def index
     @locations = Location.all
@@ -21,14 +22,19 @@ class LocationsController < ApplicationController
   def show
   end
 
-  private
-  
-  def find_location
-    @location = Location.find(params[:id])
+  def destroy
+    @location.destroy
+    redirect_to root_path
   end
+
+    private
 
   def location_params
     params.require(:location).permit(:name, :description)
+  end
+
+  def set_location
+    @location = Location.find_by(params[:id])
   end
 
 end
