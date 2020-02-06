@@ -1,3 +1,4 @@
+<!--
 <nav>
     <ul>
         <li><%= link_to 'Home', root_path %></li>
@@ -9,5 +10,16 @@
             <li><%= link_to 'Logout', destroy_user_session_path, method: 'delete' %>
         <% end %>     
     </ul>
-</nav> 
+</nav> -->
+<% if user_signed_in? %>
+<nav class="nav">
+  <a class="nav-link disabled" href="#"><%= current_user.email %></a>
+  <a class="nav-link active" href="/">Home</a>
+  <a class="nav-link" href="/locations">Locations</a>
+  <a class="nav-link" href="/", delete>Logout</a>
+  <% else %>
+    <a class="nav-link" href="/users/sign_up">Signup</a>
+    <a class="nav-link" href="/users/sign_in">Login</a>
+    <% end %>
+</nav>
  
