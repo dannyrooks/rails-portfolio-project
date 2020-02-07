@@ -1,12 +1,9 @@
-<!--
-<p><%= form_with model: @location do |f| %>
+
+<p><%= simple_form_for @location do |f| %>
         <%= f.text_field :name %><br>
         <%= f.text_area :description %><br>
         <%= f.submit %><br>
-    <% end %></p><br>-->
+    <% end %></p><br>
 
-    <p><%= text_field_tag 'location', "Location Name" %></p>
-        <%= text_area_tag 'description', "add description" %><br>
-        <br>
-        <%= submit_tag 'Create Location' %>
+    
 <!--options_for_select helper >

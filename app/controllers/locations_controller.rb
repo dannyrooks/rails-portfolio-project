@@ -19,9 +19,12 @@ class LocationsController < ApplicationController
     end
   end
 
-  def show
-    @location = Location.find_by(params[:id])
+  def update
 
+  end
+
+  def show
+    @location = Location.find(params[:id])
   end
 
   def destroy

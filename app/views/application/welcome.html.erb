@@ -1,12 +1,13 @@
 <h1>Welcome to Fishing Report!</h1>
 <br>
 
-<h2>Select a Location</h2><br>
+<%= link_to 'Locations', new_location_path %><br>
+<%= link_to 'Logout', destroy_user_session_path, method: delete %>
+
   <!-- list all locations here -->
 
 
-<br><h5>OR</h5>
-<h4><%= link_to 'New Location', new_location_path %></h4><br>
+
 
 
 

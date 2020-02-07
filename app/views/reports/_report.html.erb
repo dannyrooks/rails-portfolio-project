@@ -1,0 +1,5 @@
+<p><%= report.content %></p>
+
+<%= link_to "Edit", edit_location_report_path(report.location, report) %>
+<%= link_to "Delete", location_report_path(report.location, report), method: :delete 
+    data: { confirm: "Are you sure?" } %>
