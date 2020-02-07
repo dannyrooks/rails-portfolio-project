@@ -1,5 +1,6 @@
 class ReportsController < ApplicationController
-  before_action :current_user 
+  before_action :find_location
+  before_action :find_report, only: [:edit, :update, :destroy]
 
     def user_reports
       @reports = current_user.songs
@@ -26,9 +27,18 @@ class ReportsController < ApplicationController
       end
     end
 
+    def destroy
+      @review.destroy
+      redirect_to location_path(@location)
+    end
+
     private
 
     def report_params
       params.require(:report).permit(:title, :date, :content)
+    end
+
+    def find_location
+      @location = Location.find(params[location_id])
     end
 end
