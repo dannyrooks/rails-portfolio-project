@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   resources :locations do
     resources :reports
   end
+
+  #/most_popular_fishing_spot
+
+
   devise_for :users, :controllers => {registrations: 'registrations', omniauth_callbacks: 'callbacks'}
   devise_scope :user do 
     get 'login', to: 'devise/sessions#new'

@@ -19,12 +19,10 @@ class ReportsController < ApplicationController
     def create
       @location = Location.find(params[:location_id])
       @report = @location.reports.create(report_params)
-      @report.user = current_user
-      if @report.save
+      # @report.user_id = current_user
+      @report.save
+
         redirect_to location_path(@location)
-      else
-        render 'new'
-      end
     end
 
     def destroy
@@ -39,6 +37,6 @@ class ReportsController < ApplicationController
     end
 
     def find_location
-      @location = Location.find(params[location_id])
+      @location = Location.find(params[:location_id])
     end
 end
