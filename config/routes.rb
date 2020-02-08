@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  root to: 'locations#index'
+  root to: 'application#welcome'
 
   resources :locations do
     resources :reports
@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   devise_scope :user do 
     get 'login', to: 'devise/sessions#new'
     get 'signup', to: 'devise/registrations#new'
+    get 'edit_user_registrations', to: 'registrations#edit'
   end
 
 end

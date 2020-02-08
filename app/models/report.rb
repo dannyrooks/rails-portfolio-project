@@ -4,5 +4,5 @@ class Report < ApplicationRecord
 
     validates :title, :date, presence: true
 
-    # accepts_nested_attributes_for :location 
+    # accepts_nested_attributes_for :location, regect_if: proc { |attr| attr[:name].blank? }
 end

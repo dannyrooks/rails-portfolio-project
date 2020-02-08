@@ -11,6 +11,7 @@ class ReportsController < ApplicationController
     end
 
     def new
+      @report = current_user.reports.build(report_params)
     end
 
     def show

@@ -1,4 +1,4 @@
-<!--
+<!-- original nav bar
 <nav>
     <ul>
         <li><%= link_to 'Home', root_path %></li>
@@ -12,40 +12,23 @@
     </ul>
 </nav> 
 -->
-
-<% if !user_signed_in? %>
-<nav class="nav">
-  <a class="nav-link disabled" href="#"></a>
-  <a class="nav-link active" href="/">Home</a>
-  <a class="nav-link" href="/locations">Locations</a>
-  <a class="nav-link" href="/", delete>Logout</a>
-  <% else %>
-    <a class="nav-link" href="/users/sign_up">Signup</a>
-    <a class="nav-link" href="/users/sign_in">Login</a>
-    <% end %>
-</nav>
-
-<!--
+<nav>
   <body>
-    <div class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <%= link_to "Fishing Report", root_path, class: "navbar-brand" %>
-        </div>
-        <ul class="nav navbar-nav">
-
-        </ul>
-        <% if user_signed_in? %>
-         <p><%= link_to "New Location", new_location_path, class: "navbar-right navbar-text navbar-link" %></p>
-         <% end %>
+    <div class="navbar-header">
+            <%= link_to "Home", root_path, class: "navbar-brand" %>
+      <div class="navbar-text float-right">
+      
+        <div class="container">
+          <% if !user_signed_in? %>
+            <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+            <%= link_to "Logout", destroy_user_session_path, method:"delete"  %>
+          <% else %>
+            <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+            <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+          <% end %>
+        </div>  
       </div>
     </div>
-    -->
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-    <%= yield %>
-
   </body>
+<nav>  
  
