@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   
   root to: 'application#welcome'
 
+  resources :states, only: [:index]
+
   resources :locations do
     resources :reports
   end

@@ -1,7 +1,7 @@
 <h1>Locations</h1>
 
-  <% @locations.each do |l| %><br>
-    <%= link_to l.name, location_path(l), class: "btn btn-primary" %><br>
+  <% @locations.each do |l| %>
+    <%= link_to l.name, location_path(l), class: "btn btn-primary" %>
      <% end %>
     <br>
      <%= link_to "New Location", new_location_path %>

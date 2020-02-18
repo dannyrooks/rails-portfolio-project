@@ -5,8 +5,7 @@ class ApplicationController < ActionController::Base
     def welcome
     end
 
-    def current_user
-    end
+
 
     private
 

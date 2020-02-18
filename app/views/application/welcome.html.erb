@@ -1,8 +1,10 @@
-<h1>Welcome to Fishing Report!</h1>
+<p>Hello, <%= current_user.email %>!</p>
+<h2>Welcome to the fishing report!</h2>
 <br>
+
 <h3>Select a location or create a new one.</h3>
-<%= link_to 'Locations', locations_path %><br>
-<%= link_to 'Create New Location', new_location_path %><br>
+    <%= link_to 'Locations', locations_path %><br>
+    <%= link_to 'Create New Location', new_location_path %><br>
 
 
 

@@ -7,11 +7,11 @@ class LocationsController < ApplicationController
   end
   
   def new
-     @location = Location.new
+     @location = current_user.locations.build
   end
 
   def create
-    @location = Location.new(location_params)
+    @location = current_user.locations.build(location_params)
     if @location.save
     redirect_to locations_path
     else

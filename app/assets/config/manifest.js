@@ -2,3 +2,5 @@
 //= link_directory ../stylesheets .css
 //= require jquery
 //= require bootstrap-sprockets
+
+

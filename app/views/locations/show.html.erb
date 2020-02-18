@@ -1,14 +1,15 @@
 <h2><%= @location.name %></h2>
 <%= @location.description %><br>
 
+
 <h4>Reports:</h4>
 <%= render @location.reports %><br>
 
-<h4>Write Report:</h4>
+<h4>Write New Report:</h4>
 <%= render 'reports/form' %>
 
 
 
 <%= link_to 'Back', root_path %><br>
-<%= link_to 'Location', new_location_path %>
+<%= link_to 'New Location', new_location_path %>
 <!-- add created at timestamp >
