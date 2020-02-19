@@ -1,4 +1,5 @@
-
+<h1>Fishing Report</h1>
+<br>
 <h2>Log in</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -14,12 +15,14 @@
                 input_html: { autocomplete: "current-password" } %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
-<div class="photo">
-    <img src="https://scontent-atl3-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c239.0.962.962a/s640x640/81535034_503387676970850_7328823317141674505_n.jpg?_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_cat=102&_nc_ohc=fVsv8OdDr2wAX--b-bZ&oh=1e681bf41c59911548280679f2db19b6&oe=5F034B3A" alt="rainbow">
-</div>
+
   <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+    <%= f.submit %>
   </div>
+  
 <% end %>
 
 <%= render "devise/shared/links" %>
+<div class="photo">
+    <img src="https://scontent-atl3-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c239.0.962.962a/s640x640/81535034_503387676970850_7328823317141674505_n.jpg?_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_cat=102&_nc_ohc=fVsv8OdDr2wAX--b-bZ&oh=1e681bf41c59911548280679f2db19b6&oe=5F034B3A" alt="rainbow">
+  </div>
