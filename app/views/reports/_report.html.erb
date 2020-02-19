@@ -1,8 +1,9 @@
 
+
+<h5>Title: <%= report.title %> </h5><br>
+<h6>Report: <br> <%= report.content %></h6><br>
 <p>Posted by <%= report.user.email %> <%= time_ago_in_words(report.created_at) %> ago</p>
 
-<h5>Title: <%= report.title %> </h5>
-<h6>Report: <br> <%= report.content %></h6>
     <%= link_to 'Edit', edit_location_report_path(report.location, report) %> |
     <%= link_to 'Delete', location_report_path(report.location, report), method: :delete, data: { confirm: "Are you sure you want to delete?" } %>
 <br>
