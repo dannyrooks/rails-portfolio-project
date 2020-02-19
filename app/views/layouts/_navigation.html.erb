@@ -1,8 +1,9 @@
 <nav>
   <body>
-    <div class="navbar-header">
+    
       <div class="navbar-text float-right">
         <div class="container">
+          <div class="navbar-header">
           <% if user_signed_in? %>
             <%= link_to "Home", root_path, class: "navbar-link" %> |
             <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
