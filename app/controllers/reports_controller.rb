@@ -24,7 +24,7 @@ class ReportsController < ApplicationController
     end
 
     def update
-      if @location.update(report_params)
+      if @report.update(report_params)
         redirect_to location_path(@location)
       else
         render 'edit'
@@ -32,7 +32,7 @@ class ReportsController < ApplicationController
     end
 
     def destroy
-      @review.destroy
+      @report.destroy
       redirect_to location_path(@location)
     end
 

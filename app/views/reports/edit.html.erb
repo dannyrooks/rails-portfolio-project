@@ -1,0 +1,6 @@
+<h2>Edit Report</h2>
+<%= simple_form_for([@location, @report]) do |f| %>
+    <%= f.input :title, label: "Title" %>
+    <%= f.input :content, label: "Report" %>
+    <%= f.button :submit %>
+<% end %>
