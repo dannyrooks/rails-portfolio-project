@@ -2,9 +2,13 @@ class ReportsController < ApplicationController
   before_action :find_location
   before_action :find_report, only: [:edit, :update, :destroy]
       
-      def index
-            @reports = Report.all 
-      end
+    def index
+      @reports = Report.all 
+    end
+
+    def new
+      @report = current_user.report.build
+    end
 
     def create
           @report = @location.reports.create(report_params)

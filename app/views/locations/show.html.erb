@@ -1,12 +1,15 @@
-<h2><%= @location.name %></h2>
-<%= @location.description %><br>
+<h1> Location | <%= @location.name %></h1>
+<p> Description: <br> <%= @location.description %></p>
+<br>
 
-
-<h4>Reports:</h4>
-<%= render @location.reports %><br>
-
+<h3>Reports </h3>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<%= render @location.reports %>
+<br>
+<br>
 <h4>Write New Report:</h4>
 <%= render 'reports/form' %>
+<br>
 
 
 
