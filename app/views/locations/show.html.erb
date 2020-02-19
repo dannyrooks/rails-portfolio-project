@@ -1,5 +1,4 @@
-<p>Created <%= time_ago_in_words(@location.created_at) %> ago</p>
-<h1> Location | <%= @location.name %></h1>
+<h1><%= @location.name %></h1><p>Created <%= time_ago_in_words(@location.created_at) %> ago</p>
 <h5> Description | <%= @location.description %></h5>
 <br>
 <br>
@@ -12,9 +11,9 @@
 <h4>Write New Report:</h4>
 <%= render 'reports/form' %>
 <br>
-
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p> 
 
 
 <%= link_to 'Back', root_path %><br>
-<%= link_to 'New Location', new_location_path %>
-<!-- add created at timestamp >
+<%= link_to 'Create New Location', new_location_path %>

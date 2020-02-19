@@ -1,7 +1,12 @@
 <h1>Locations</h1>
-
+<br>
   <% @locations.each do |location| %>
-    <%= link_to location.name, location_path(location), class: "btn btn-primary" %><br>
-     <% end %>
-    <br>
+    <div class="col-sm-4">
+      <div class="location">
+        <h3><%= location.name %></h3>
+      <%= link_to "View Reports", location_path(location), class: "btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+    
      <%= link_to "New Location", new_location_path %>

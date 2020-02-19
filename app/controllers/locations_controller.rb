@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
   before_action :find_location, only: [:show, :new, :create, :index]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index, :show]
   
   def index
     @locations = Location.all.order("created_at ASC")

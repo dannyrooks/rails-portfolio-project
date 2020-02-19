@@ -1,24 +1,25 @@
 class ReportsController < ApplicationController
   before_action :find_location
   before_action :find_report, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!
       
     def index
       @reports = Report.all 
     end
 
     def new
-      @report = current_user.report.build
+      @report = current_user.reports.build
     end
 
     def create
-          @report = @location.reports.create(report_params)
-          @report.user = current_user
-          if @report.save
-            redirect_to location_path(@location)
-          else
-            render 'new'
-          end
-        end
+      @report = current_user.reports.build(report_params)
+      if @report.save
+        redirect_to new_location_report_path
+      else
+        flash[:alert] = "Uh-Oh! Error creating report, try again!"
+        redirect_to new_location_report_path(@location, @report)
+      end
+    end
 
     def edit
     end

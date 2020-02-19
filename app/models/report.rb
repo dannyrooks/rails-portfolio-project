@@ -2,7 +2,8 @@ class Report < ApplicationRecord
     belongs_to :user
     belongs_to :location
 
-    validates :title, presence: true
+    validates :title, :content, presence: true
+    validates :title, uniqueness: true
 
-    # accepts_nested_attributes_for :location, regect_if: proc { |attr| attr[:name].blank? }
+    # accepts_nested_attributes_for :location, reject_if: proc { |attr| attr[:name].blank? }
 end

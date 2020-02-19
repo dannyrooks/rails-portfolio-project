@@ -1,7 +1,10 @@
-<%= simple_form_for([@location, @location.reports.build]) do |f| %>
-    <%= f.input :title %>
-    <%= f.input :content, label: "Report" %>
-    <%= f.button :submit %>
-    <% end %>
+<body>
+    <p><%= simple_form_for([@location, @location.reports.build]) do |f| %>
+        <%= f.input :title %>
+        <%= f.input :content, label: "Report" %>
+        <%= f.button :submit %>
+    <% end %></p>
 
+
+</body>
     
