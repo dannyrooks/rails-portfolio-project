@@ -13,14 +13,16 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise'
+gem 'omniauth'
 gem 'omniauth-github'
+gem 'bcrypt', '~> 3.1.7'
 gem 'pry'
 gem 'dotenv-rails'
 gem 'bootstrap'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'simple_form'
-gem 'image_processing', '~> 1.2'
+# gem 'image_processing', '~> 1.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

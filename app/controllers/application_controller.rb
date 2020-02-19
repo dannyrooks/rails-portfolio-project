@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
 
 
-    private
+    # private
 
     # def require_login
     #     unless user_signed_in?
