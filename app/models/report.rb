@@ -5,5 +5,6 @@ class Report < ApplicationRecord
     validates :title, :content, presence: true
     validates :title, uniqueness: true
 
-    # accepts_nested_attributes_for :location, reject_if: proc { |attr| attr[:name].blank? }
+    scope :most_reports, -> 
+
 end

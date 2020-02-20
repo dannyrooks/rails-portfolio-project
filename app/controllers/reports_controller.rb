@@ -38,6 +38,10 @@ class ReportsController < ApplicationController
       redirect_to location_path(@location)
     end
 
+    def user_reports
+      @reports = current_user.reports
+    end
+
     private
 
     def report_params
