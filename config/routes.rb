@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   resources :states, only: [:index]
 
   resources :locations do
-    resources :reports
+    resources :reports, only: [:index, :new, :edit, :destroy]
   end
+
+  resources :locations, only: [:show, :index, :new, :create]
 
   #/most_popular_fishing_spot
 

@@ -1,6 +1,7 @@
 class Location < ApplicationRecord
     has_many :reports
     has_many :users, through: :reports
+    has_one :state
 
     validates :name, :description, presence: true 
     validates :name, uniqueness: true
