@@ -3,7 +3,7 @@ class LocationsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   
   def index
-    @locations = Location.all.order("created_at ASC")
+    @locations = Location.all.order("name ASC")
   end
   
   def new

@@ -2,13 +2,14 @@ Rails.application.routes.draw do
   
   root to: 'application#welcome'
 
-  resources :states, only: [:index]
-
   resources :locations do
-    resources :reports, only: [:index, :new, :edit, :destroy]
+    resources :reports do
+      resources :comments, only: [:create, :show, :delete]
+    end
   end
 
   resources :locations, only: [:show, :index, :new, :create]
+    
 
   #/most_popular_fishing_spot
 

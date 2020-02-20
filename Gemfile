@@ -22,6 +22,7 @@ gem 'bootstrap'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'simple_form'
+
 # gem 'image_processing', '~> 1.2'
 
 group :development, :test do
