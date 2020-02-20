@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   root to: 'application#welcome'
 
-  resources :locations do
+  resources :locations, only: [:new, :index, :show, :create] do
     resources :reports do
       resources :comments, only: [:create, :new, :show, :delete]
     end
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :locations, only: [:show, :index, :new, :create]
     
 
-  #/most_popular_fishing_spot
+  # get /most_popular_fishing_spot
 
 
   devise_for :users, :controllers => {registrations: 'registrations', omniauth_callbacks: 'callbacks'}

@@ -7,5 +7,9 @@ class Report < ApplicationRecord
     validates :title, uniqueness: true
 
     scope :location_reported_most, -> { where(reports) }
-    scope :newest_report, -> { order(created_at: :desc) }
+    scope :order_by_date, -> { order(created_at: :desc) }
+
+    def self.latest_report
+        Report.where()
+    end
 end
