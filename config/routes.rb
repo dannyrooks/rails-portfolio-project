@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :locations do
     resources :reports do
-      resources :comments, only: [:create, :show, :delete]
+      resources :comments, only: [:create, :new, :show, :delete]
     end
   end
 
