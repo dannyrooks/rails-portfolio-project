@@ -42,6 +42,12 @@ class ReportsController < ApplicationController
       @reports = current_user.reports
     end
 
+    def recent_report
+      Report.order_by_date.first
+    end
+
+
+
     private
 
     def report_params

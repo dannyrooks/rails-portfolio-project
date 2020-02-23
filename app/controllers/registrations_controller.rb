@@ -1,5 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
     #helper methods, whitelisting, strong params 
+    
 
     private
 
