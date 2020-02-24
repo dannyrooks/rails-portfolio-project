@@ -4,6 +4,13 @@ class ApplicationController < ActionController::Base
     def welcome
     end
 
+    # def title
+    #     @reports = Report.recent_report
+    # end
+
+    def name
+        @locations = Location.order_by_name
+    end
 end
 
 

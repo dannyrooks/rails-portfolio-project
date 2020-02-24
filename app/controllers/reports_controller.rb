@@ -22,6 +22,9 @@ class ReportsController < ApplicationController
       end
     end
 
+    def show
+    end
+
     def edit
     end
 
@@ -46,8 +49,7 @@ class ReportsController < ApplicationController
       Report.order_by_date.first
     end
 
-
-
+    
     private
 
     def report_params

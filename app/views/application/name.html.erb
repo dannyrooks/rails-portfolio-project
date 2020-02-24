@@ -1,0 +1,9 @@
+<% provide(:name, "Locations by Name") %>
+
+<h1>Locations by Name</h1>
+
+    <% @locations.each do |l| %>
+        <ul>
+            <li><%= link_to l.name, location_report_path(l) %></li>
+        </ul>
+    <% end %>    

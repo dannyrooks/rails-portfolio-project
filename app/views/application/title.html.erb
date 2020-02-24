@@ -1,0 +1,9 @@
+<% provide(:title, "Latest Reports") %>
+
+<h1>Latest Reports</h1>
+
+    <% @reports.each do |r| %>
+        <ul>
+            <li><%= link_to r.title, location_reports_path(r) %></li>
+        </ul>
+    <% end %>    

@@ -3,7 +3,7 @@ class Comment < ApplicationRecord
     belongs_to :user
 
     validates :content, presence: true
-    
-    accepts_nested_attributes_for :reviews
 
+    accepts_nested_attributes_for :reviews
+    
 end

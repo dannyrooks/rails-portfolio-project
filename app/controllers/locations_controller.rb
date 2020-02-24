@@ -20,17 +20,17 @@ class LocationsController < ApplicationController
   end
 
   def update
-
   end
 
   def show
-    @location = Location.find(params[:id])
+    @location = Location.find_by(id: params[:id])
   end
 
   def destroy
     @location.destroy
     redirect_to root_path
   end
+
 
     private
 
@@ -39,7 +39,7 @@ class LocationsController < ApplicationController
   end
 
   def find_location
-    @location = Location.find_by(params[:id])
+    @location = Location.find_by(id: params[:id])
   end
 
 end

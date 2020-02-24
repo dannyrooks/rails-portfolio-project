@@ -3,15 +3,16 @@ Rails.application.routes.draw do
   root to: 'application#welcome'
 
   resources :locations, only: [:new, :index, :show, :create] do
-    resources :reports do
-      resources :comments, only: [:create, :new, :show, :delete]
-    end
+    resources :reports
+      # resources :comments, only: [:create, :new, :show, :delete]
+  
   end
 
   resources :locations, only: [:show, :index, :new, :create]
-    
+  # resources :reports
 
-  # get /most_popular_fishing_spot
+  get 'reports/order_by_recent', to: 'application#title'
+  get 'location/order', to: 'application#name'
 
 
   devise_for :users, :controllers => {registrations: 'registrations', omniauth_callbacks: 'callbacks'}
