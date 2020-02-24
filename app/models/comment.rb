@@ -1,9 +1,9 @@
-class Comment < ApplicationRecord
-    belongs_to :report
-    belongs_to :user
+# class Comment < ApplicationRecord
+#     belongs_to :report
+#     belongs_to :user
 
-    validates :content, presence: true
+#     validates :content, presence: true
 
-    accepts_nested_attributes_for :reviews
+#     accepts_nested_attributes_for :reviews
     
-end
+# end

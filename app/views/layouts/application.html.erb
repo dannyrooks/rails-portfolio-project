@@ -30,7 +30,7 @@
         <% if user_signed_in? %>
           <%= link_to "Add Location", new_location_path, class: "navbar-link" %> |
           <%= link_to "Locations Index", locations_path, class: "navbar-link" %> |
-          <%= link_to 'Recent Reports', reports_order_by_recent_path %>
+          <%= link_to 'Latest Reports', reports_order_by_recent_path, class: "navbar-link" %>
 
         <% end %>
       </div>

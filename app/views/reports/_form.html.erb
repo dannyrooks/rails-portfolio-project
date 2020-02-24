@@ -2,7 +2,7 @@
     <p><%= simple_form_for([@location, @location.reports.build]) do |f| %>
         <%= f.input :title %>
         <%= f.input :content, label: "Report" %>
-        <%= f.button :submit %>
+        <%= f.button :submit, :class => 'btn-custom' %>
     <% end %></p>
 
     

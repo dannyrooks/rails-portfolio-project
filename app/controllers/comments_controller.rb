@@ -1,15 +1,15 @@
-class CommentsController < ApplicationController
+# class CommentsController < ApplicationController
 
-    def create
-    end
+#     def create
+#     end
 
-    def show
-    end
+#     def show
+#     end
 
-    def edit
-    end
+#     def edit
+#     end
 
-    def destroy
-    end
+#     def destroy
+#     end
 
-end
+# end
