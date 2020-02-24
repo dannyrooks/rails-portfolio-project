@@ -23,6 +23,7 @@ class ReportsController < ApplicationController
     end
 
     def show
+      @report = Report.find_by(id: params[:id])
     end
 
     def edit
@@ -57,7 +58,7 @@ class ReportsController < ApplicationController
     end
 
     def find_location
-      @location = Location.find(params[:location_id])
+      @location = Location.find_by(id: params[:location_id])
     end
 
     def find_report

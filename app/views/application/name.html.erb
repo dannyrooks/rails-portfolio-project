@@ -4,6 +4,6 @@
 
     <% @locations.each do |l| %>
         <ul>
-            <li><%= link_to l.name, location_report_path(l) %></li>
+            <li><%= link_to l.name, location_path(l) %></li>
         </ul>
     <% end %>    
