@@ -3,13 +3,14 @@ Rails.application.routes.draw do
   root to: 'application#welcome'
 
   resources :locations, only: [:new, :index, :show, :create] do
-    resources :reports
-      # resources :comments, only: [:create, :new, :show, :delete]
-  
+    resources :reports  
   end
 
-  resources :locations, only: [:show, :index, :new, :create]
-  # resources :reports
+  resources :locations, only: [:show, :index, :new, :create] do
+    resources :states, only: [:index]
+  end
+
+  resources :reports
 
   get 'reports/order_by_recent', to: 'application#title'
   get 'location/order', to: 'application#name'

@@ -2,8 +2,10 @@
     <p><%= simple_form_for([@location, @location.reports.build]) do |f| %>
         <%= f.input :title %>
         <%= f.input :content, label: "Report" %>
-        <%= f.button :submit, :class => 'btn-custom' %>
+        <%= f.submit %>
     <% end %></p>
+
+    <%= render 'devise/shared/flash' %>
 
     
 

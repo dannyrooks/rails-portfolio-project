@@ -15,10 +15,9 @@ class ReportsController < ApplicationController
       @report = @location.reports.create(report_params)
       @report.user = current_user      
       if @report.save
-        redirect_to location_path(@location)
+        redirect_to report_path(@location)
       else
-        flash[:alert] = "Uh-Oh! Error creating report, try again!"
-        redirect_to new_location_report_path(@location, @report)
+        render :new
       end
     end
 

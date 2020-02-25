@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
   before_action :find_location, only: [:show, :new, :create, :index]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!
   
   def index
     @locations = Location.all.order("name ASC")
@@ -23,6 +23,7 @@ class LocationsController < ApplicationController
   end
 
   def show
+    # binding.pry
     @location = Location.find_by(id: params[:id])
   end
 
@@ -35,7 +36,7 @@ class LocationsController < ApplicationController
     private
 
   def location_params
-    params.require(:location).permit(:name, :description)
+    params.require(:location).permit(:name, :state_id, :description)
   end
 
   def find_location
