@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
     end
 
     def title
-        @reports = Report.recent_report
+        @reports = Report.recent_reports
     end
 
     def name

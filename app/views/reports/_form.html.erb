@@ -2,7 +2,7 @@
     <p><%= simple_form_for([@location, @location.reports.build]) do |f| %>
         <%= f.input :title %>
         <%= f.input :content, label: "Report" %>
-        <%= f.submit %>
+        <%= f.button :submit %>
     <% end %></p>
 
     <%= render 'devise/shared/flash' %>

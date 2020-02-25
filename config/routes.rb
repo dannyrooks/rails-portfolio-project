@@ -4,16 +4,17 @@ Rails.application.routes.draw do
 
   resources :locations, only: [:new, :index, :show, :create] do
     resources :reports  
-  end
-
-  resources :locations, only: [:show, :index, :new, :create] do
     resources :states, only: [:index]
   end
 
-  resources :reports
+  # resources :locations, only: [:show, :index, :new, :create] do
+  #   resources :states, only: [:index]
+  # end
 
-  get 'reports/order_by_recent', to: 'application#title'
-  get 'location/order', to: 'application#name'
+  # resources :reports
+
+  get 'reports/recent_reports', to: 'application#title'
+  get 'location/order_by_name', to: 'application#name'
 
 
   devise_for :users, :controllers => {registrations: 'registrations', omniauth_callbacks: 'callbacks'}

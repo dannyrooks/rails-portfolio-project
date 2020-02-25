@@ -13,11 +13,11 @@ class ReportsController < ApplicationController
 
     def create
       @report = @location.reports.create(report_params)
-      @report.user = current_user      
+      @report.user = current_user  
       if @report.save
-        redirect_to report_path(@location)
+        redirect_to location_path(@location)
       else
-        render :new
+        render 'new'
       end
     end
 
@@ -58,6 +58,7 @@ class ReportsController < ApplicationController
 
     def find_location
       @location = Location.find_by(id: params[:location_id])
+      # @location = Location.find(params[:location_id])
     end
 
     def find_report

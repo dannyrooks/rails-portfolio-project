@@ -3,7 +3,7 @@ class LocationsController < ApplicationController
   before_action :authenticate_user!
   
   def index
-    @locations = Location.all.order("name ASC")
+    @locations = Location.all.order_by_name
   end
   
   def new
@@ -24,7 +24,7 @@ class LocationsController < ApplicationController
 
   def show
     # binding.pry
-    @location = Location.find_by(id: params[:id])
+    @location = Location.find(params[:id])
   end
 
   def destroy

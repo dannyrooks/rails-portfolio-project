@@ -1,10 +1,9 @@
 
 <p><%= simple_form_for @location do |f| %>
-        <%= f.text_field :name, label: "Location Name" %><br>
-        <%= f.collection_select(:state_id, State.all, :id, :name), include_blank: true %>
+        <%= f.input :name %><br>
+        <%= f.association :state, :collection => State.all, :include_blank => true %><br><br>
         <%= f.input :description %><br>
         <%= f.button :submit, :class => 'btn-custom' %><br>
-    <% end %></p><br>
+    <% end %></p><br
 
     
-<!--options_for_select helper >

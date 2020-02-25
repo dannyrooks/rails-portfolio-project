@@ -6,14 +6,14 @@
 <h3>Reports </h3>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <br>
-<%= render @location.reports %>
+<%= render @location.reports.order("created_at DESC") %>
 <br>
 <br>
 <h4>Write New Report:</h4>
 <%= render 'reports/form' %>
 <br>
 
-<%= link_to 'Most Recent Reports', reports_order_by_recent_path %>
+<%= link_to 'Most Recent Reports', reports_recent_reports_path %>
 
 <%= link_to 'Back', root_path %><br>
 <%= link_to 'Create New Location', location_path %>
