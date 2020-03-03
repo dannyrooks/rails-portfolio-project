@@ -82,12 +82,8 @@ GEM
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
     childprocess (3.0.0)
-    city-state (0.0.8)
     coderay (1.1.2)
     concurrent-ruby (1.1.5)
-    country_state_select (3.0.5)
-      city-state
-      rails
     crass (1.0.6)
     devise (4.7.1)
       bcrypt (~> 3.0)
@@ -160,7 +156,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     public_suffix (4.0.3)
-    puma (4.3.1)
+    puma (4.3.3)
       nio4r (~> 2.0)
     rack (2.1.2)
     rack-proxy (0.6.5)
@@ -271,7 +267,6 @@ DEPENDENCIES
   bootstrap-sass
   byebug
   capybara (>= 2.15)
-  country_state_select
   devise
   dotenv-rails
   jbuilder (~> 2.7)
@@ -280,7 +275,7 @@ DEPENDENCIES
   omniauth
   omniauth-github
   pry
-  puma (~> 4.1)
+  puma (~> 4.3)
   rails (~> 6.0.2, >= 6.0.2.1)
   sass-rails (>= 6)
   selenium-webdriver
