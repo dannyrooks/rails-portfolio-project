@@ -3,6 +3,6 @@
 <h1>Latest Reports</h1>
     <% @reports.each do |r| %>
         <ul>
-            <li><%= link_to r.title, reports_recent_reports_path %></li>
+            <li><%= link_to r.title, location_path(r.location_id) %></li>
         </ul>
     <% end %>    

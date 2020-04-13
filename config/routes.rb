@@ -7,9 +7,6 @@ Rails.application.routes.draw do
     resources :states, only: [:index]
   end
 
-  # resources :locations, only: [:show, :index, :new, :create] do
-  #   resources :states, only: [:index]
-  # end
 
   # resources :reports
 

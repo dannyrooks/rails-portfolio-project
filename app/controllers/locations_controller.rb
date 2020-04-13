@@ -4,6 +4,11 @@ class LocationsController < ApplicationController
   
   def index
     @locations = Location.all.order_by_name
+      @search = params["search"]
+      if @search.present?
+        @name = @search["name"]
+        @locations = Location.where(name: @name)
+      end
   end
   
   def new
@@ -19,19 +24,13 @@ class LocationsController < ApplicationController
     end
   end
 
-  def update
-  end
-
   def show
-    # binding.pry
-    @location = Location.find(params[:id])
   end
 
   def destroy
     @location.destroy
     redirect_to root_path
   end
-
 
     private
 

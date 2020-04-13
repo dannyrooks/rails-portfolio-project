@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
     end
 
     def name
+        
         @locations = Location.order_by_name
     end
 end

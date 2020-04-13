@@ -1,6 +1,6 @@
 class ReportsController < ApplicationController
   before_action :find_location
-  before_action :find_report, only: [:edit, :update, :destroy]
+  before_action :find_report, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
       
     def index
@@ -22,7 +22,6 @@ class ReportsController < ApplicationController
     end
 
     def show
-      @report = Report.find_by(id: params[:id])
     end
 
     def edit
