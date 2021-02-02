@@ -1,8 +1,8 @@
 
-
 <h5><%= report.title %> </h5><br>
 <h6>Report: <br> <%= report.content %></h6><br>
-<p>Posted by <%= report.user.email %><br>
+<p>Posted by <%= report.user %><br>
+
 <%= time_ago_in_words(report.created_at) %> ago</p>
 
 <% if user_signed_in? %>
