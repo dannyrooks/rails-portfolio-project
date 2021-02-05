@@ -1,7 +1,7 @@
 
 <h5><%= report.title %> </h5><br>
 <h6>Report: <br> <%= report.content %></h6><br>
-<p>Posted by <%= report.user %><br>
+<p>Posted by <%= report.user.email %><br>
 
 <%= time_ago_in_words(report.created_at) %> ago</p>
 

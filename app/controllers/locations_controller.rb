@@ -26,7 +26,7 @@ class LocationsController < ApplicationController
 
   def show  
     # binding.pry
-    @location = Location.find_by(params[:id])
+    @location = Location.find_by(id: params[:id])
   end
 
   def destroy

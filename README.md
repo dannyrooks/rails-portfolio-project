@@ -6,7 +6,7 @@ This is an open forum style MVC CRUD app built using for fishermen to share thei
 
 * Fork and clone repo
 
-* cd into 'rails-portfolio-project
+* cd into 'rails-project
 
 * bundle install
 
